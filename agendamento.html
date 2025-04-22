@@ -26,7 +26,7 @@
 
   <section>
     <h2>Escolha a data e o horário para o seu atendimento:</h2>
-    <form action="/agendar" method="POST">
+    <form id="form-agendamento">
       <label for="data">Data:</label>
       <input type="date" id="data" name="data" required><br><br>
 
@@ -35,15 +35,24 @@
 
       <label for="servico">Selecione o serviço:</label>
       <select id="servico" name="servico">
-        <option value="corte_simples">Corte Simples - R$20</option>
-        <option value="degrade_fade">Degrade - Fade - R$35</option>
-        <option value="barba_simples">Barba Simples - R$15</option>
-        <option value="minoxidil">Minoxidil - R$100</option>
-        <option value="corte_com_lavagem">Corte com Lavagem - R$40</option>
+        <option value="Corte Simples - R$20">Corte Simples - R$20</option>
+        <option value="Degrade - Fade - R$35">Degrade - Fade - R$35</option>
+        <option value="Barba Simples - R$15">Barba Simples - R$15</option>
+        <option value="Minoxidil - R$100">Minoxidil - R$100</option>
+        <option value="Corte com Lavagem - R$40">Corte com Lavagem - R$40</option>
       </select><br><br>
 
       <button type="submit">Confirmar Agendamento</button>
     </form>
+  </section>
+
+  <section class="pix">
+    <h2>Pagamento via PIX</h2>
+    <p>Escaneie o QR Code abaixo para realizar o pagamento e confirmar seu agendamento.</p>
+
+    <img src="PIX.jpg" alt="QR Code PIX" style="max-width: 300px; display: block; margin-bottom: 10px;">
+
+    <p style="margin-top: 10px; font-style: italic;">⚠️ O agendamento só será validado após o pagamento via PIX.</p>
   </section>
 
   <script src="script.js"></script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Agendamentos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.4/tabletop.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Painel de Agendamentos (Google Sheets)</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Hora</th>
+        <th>Serviço</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-agendamentos">
+      <tr><td colspan="3">Carregando...</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function exibirAgendamentos(data) {
+      const tbody = document.getElementById("tabela-agendamentos");
+      tbody.innerHTML = "";
+
+      if (!data.length) {
+        tbody.innerHTML = "<tr><td colspan='3'>Nenhum agendamento encontrado.</td></tr>";
+        return;
+      }
+
+      data.forEach(linha => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${linha.Data}</td>
+          <td>${linha.Horário}</td>
+          <td>${linha.Serviço}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      Tabletop.init({
+        key: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSNIcpP2jpKSM_CwCKYnv1sfdWzspannZXJXEGh3F4Xc4go6_iJDBfnTbdOCsGkbdG9qkuptU6GQNN9/pubhtml",
+        callback: exibirAgendamentos,
+        simpleSheet: true
+      });
+    });
+  </script>
+</body>
+</html>
