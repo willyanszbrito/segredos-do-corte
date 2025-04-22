@@ -11,6 +11,19 @@
     <h1>Agendamento - Segredos do Corte</h1>
   </header>
 
+  <section class="agenda">
+    <h2>Ou selecione um dia da semana:</h2>
+    <div class="dias-semana">
+      <button type="button" onclick="selectDay('Segunda')">Segunda</button>
+      <button type="button" onclick="selectDay('Terça')">Terça</button>
+      <button type="button" onclick="selectDay('Quarta')">Quarta</button>
+      <button type="button" onclick="selectDay('Quinta')">Quinta</button>
+      <button type="button" onclick="selectDay('Sexta')">Sexta</button>
+      <button type="button" onclick="selectDay('Sábado')">Sábado</button>
+      <button type="button" onclick="selectDay('Domingo')">Domingo</button>
+    </div>
+  </section>
+
   <section>
     <h2>Escolha a data e o horário para o seu atendimento:</h2>
     <form action="/agendar" method="POST">

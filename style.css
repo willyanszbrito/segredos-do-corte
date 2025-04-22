@@ -1,51 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 36px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .servicos {
-    padding: 20px;
-    background-color: white;
-    margin-top: 20px;
-  }
-  
-  .servicos h2 {
-    font-size: 28px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.servicos {
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.servicos h2 {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.agenda {
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.dias-semana button {
+  font-size: 18px;
+  margin: 5px;
+}
